@@ -1,0 +1,100 @@
+/*Color Palette*/
+$color1:#2E073F;
+$color2:#7A1CAC;
+$color3:#AD49E1;
+$color4:#EBD3F8;
+$color-white:white;
+
+@mixin photoContainer($height) {
+    width: 250px;
+    height: $height;    
+    background-color: $color3;
+    border-radius: 5px;
+    margin: 3px;
+    // display: flex;
+    border: 1px solid red;
+}
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+body {
+    background-color: $color1;
+    
+header {
+    border: 1px solid #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    height: auto;
+    height: 100px;
+    nav{
+        ul{
+            display: flex;
+            li{
+                margin-top: 15px;
+                input{
+                    text-align: center;
+                    margin-top: 15px;
+                    font-size: large;
+                    width: 200px;
+                    height: 30px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                    background-color: $color4;
+                    transition: background-color 0.3s ease;
+                }
+                a{
+                    color: $color-white;
+                    text-decoration: none;
+                    font-size: 50px;
+                    margin: 10px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s ease;
+                }
+            }
+        }
+    }
+}
+
+}
+
+main {
+    border: 1px solid #ccc;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    section{
+        img{
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+}
+
+.photoContainer {
+    @include photoContainer(400px);
+}
+.photoContainer2{
+    @include photoContainer(300px);
+}
+
+.photoContainer3{
+    @include photoContainer(500px);
+}
+
+.photoContainer4{
+    @include photoContainer(250px);
+}
